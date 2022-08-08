@@ -1,3 +1,4 @@
+import { DatepickerModule } from "ngx-bootstrap/datepicker";
 import { Lote } from "./Lote";
 import { Palestrante } from "./Palestrante";
 import { RedeSocial } from "./RedeSocial";
