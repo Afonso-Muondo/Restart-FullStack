@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using ProEventos.Application.Contratos;
@@ -22,7 +21,6 @@ namespace ProEventos.Application
             _geralPersist = geralPersist;
             _eventoPersist = eventoPersist;
             _mapper = mapper;
-
         }
 
         public async Task<EventoDto> AddEventos(EventoDto model)
