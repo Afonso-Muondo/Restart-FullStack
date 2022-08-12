@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { EventoService } from 'src/app/services/evento.service';
 import { Router } from '@angular/router';
 import { Evento } from 'src/app/models/Evento';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-evento-lista',
@@ -56,6 +57,12 @@ export class EventoListaComponent implements OnInit {
 
       public alterarImagem(): void {
         this.exibirImagem = !this.exibirImagem;
+      }
+
+      public mostraImagem(imagemURL: string): string {
+        return (imagemURL != '')
+        ? `${environment.apiURL}resources/images/${imagemURL}`
+        : 'assets/img/SemImagem.png'
       }
 
       public carregarEventos(): void {
