@@ -84,7 +84,7 @@ namespace ProEventos.API.Controllers
         }
 
         [HttpPost("upload-image/{eventoId}")]
-        public async Task<IActionResult> Post(int eventoId)
+        public async Task<IActionResult> UploadImage(int eventoId)
         {
             try
             {
@@ -171,7 +171,6 @@ namespace ProEventos.API.Controllers
         }
 
         [NonAction]
-
         public async Task<string> SaveImage(IFormFile imageFile) 
         {
             string imageName = new String(Path.GetFileNameWithoutExtension(imageFile.FileName)
@@ -192,7 +191,6 @@ namespace ProEventos.API.Controllers
         }
 
         [NonAction]
-
         public void DeleteImage(string imageName) 
         {
             var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, @"Resources/images", imageName);
