@@ -15,6 +15,7 @@ import { AccountService } from './services/account.service';
 
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 
+import { AppRoutingModule } from './app-routing.module';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -22,8 +23,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { AppRoutingModule } from './app-routing.module';
 import { NgxCurrencyModule } from 'ngx-currency';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { AppComponent } from './app.component';
 import { EventosComponent } from './components/eventos/eventos.component';
@@ -72,6 +73,7 @@ defineLocale('pt-br', ptBrLocale);
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
     ToastrModule.forRoot(
       {
         timeOut: 5000,
